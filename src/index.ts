@@ -1,1 +1,1 @@
-export const PACKAGE_NAME = 'Roman help me';
+export const PACKAGE_NAME = 'nee';

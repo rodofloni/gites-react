@@ -1,10 +1,15 @@
 import * as React from 'react';
-import { PACKAGE_NAME } from '../src/index';
+// import headerComponent from '../components/headerComponent/headerComponent'
+
 
 export class Demo extends React.PureComponent {
   render() {
     return (
-        <h1>{ PACKAGE_NAME }</h1>
+      <div className="hd-container">
+          <h1 className='hd-title'> gites </h1> 
+      </div>
     );
   }
 }
+
+
