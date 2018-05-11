@@ -6,7 +6,12 @@ export class Demo extends React.PureComponent {
   render() {
     return (
       <div className="hd-container">
-          <h1 className='hd-title'> gites </h1> 
+        <ul className="hd-navbar">
+          <li><a href="default.asp">Home</a></li>
+          <li><a href="news.asp">News</a></li>
+          <li><a href="contact.asp">Contact</a></li>
+          <li><a href="about.asp">About</a></li>
+        </ul> 
       </div>
     );
   }
