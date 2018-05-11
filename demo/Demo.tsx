@@ -1,17 +1,13 @@
 import * as React from 'react';
-// import headerComponent from '../components/headerComponent/headerComponent'
+import HeaderComponent from '../components/HeaderComponents/HeaderComponent'
+
 
 
 export class Demo extends React.PureComponent {
   render() {
     return (
-      <div className="hd-container">
-        <ul className="hd-navbar">
-          <li><a href="default.asp">Home</a></li>
-          <li><a href="news.asp">News</a></li>
-          <li><a href="contact.asp">Contact</a></li>
-          <li><a href="about.asp">About</a></li>
-        </ul> 
+      <div>
+        <HeaderComponent tab_1={'Vakantiehuizen'} tab_2={'Bed & Breakfast'} tab_3={'Te koop'} tab_4={'Adverteren'} button_login={'Inloggen'}/>
       </div>
     );
   }
