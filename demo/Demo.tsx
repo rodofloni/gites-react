@@ -3,6 +3,7 @@ import ContentBody from '../components/ContentContainers/ContentBody/ContentBody
 import ContentSpacer from '../components/ContentContainers/ContentSpacer/ContentSpacer';
 import ContentTitle from '../components/ContentContainers/ContentTitle/ContentTitle';
 import HeaderComponent from '../components/HeaderComponents/HeaderComponent';
+// import SearchComponent from '../components/SearchComponent/SearchComponent';
 
 export class Demo extends React.PureComponent {
   render() {
@@ -22,3 +23,5 @@ export class Demo extends React.PureComponent {
     );
   }
 }
+
+// <SearchComponent personAmount={9} startDate={'0-0-2019'} endDate={'12-12-2018'} />
