@@ -57,7 +57,35 @@ li#hd-navbar-button a {
   text-decoration: none;
 }
 
+
 //----- CUSTOM CLASSES & ID'S -----//
+//--- NAVBAR ---//
+.hd-navbar{
+  margin: auto;
+  width: 70%;
+  height: 85px;
+}
+.hd-navbar-mobile{
+  display: none;
+  margin: auto;
+  width: 70%;
+  height: 85px;
+}
+
+.hamburger-bundle{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.hamburger {
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+  border-radius: 25px;
+}
+
 
 .hd-container{
   width: 100%;
@@ -69,9 +97,10 @@ li#hd-navbar-button a {
 
 //--- SPACER ---//
 .ct-spacer{
-  margin-top: -25px;
-  margin-bottom: -59px;
-  height: 700px;
+  margin-top: -21px;
+  margin-bottom: 0;
+  height: 634px;
+  width: auto;
   background-image: url("https://www.gitescdn.nl/system/themes/header_images/000/000/017/header/wintersport.jpg?1452004382");
   background-repeat: no-repeat;
   background-size: cover;
@@ -211,4 +240,80 @@ input, label {
 @font-face {
   font-family: "gitesfake";
   src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+}
+
+//Responsiveness
+
+
+@media (max-width: 1100px) {
+  .hd-navbar {
+    display: none;
+  }
+  .hd-navbar-mobile{
+    display: block;
+  }
+  .ct-spacer{
+    min-width: 100%;
+    min-height: 300px;
+    max-height: 600px;
+    height:auto;
+  }
+  .ct-body-spacing{
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 35px;
+    width: 80%;
+  }
+
+} 
+@media (max-width: 900px){
+  #ct-title-name{
+    font-size: 40px;
+    }
+  .ct-body-spacing{
+  margin: auto;
+  padding: 35px;
+  width: 32%;
+  }
+  
+}
+@media (max-width: 800px) {
+  .ct-spacer{
+    min-width: 100%;
+    min-height: 250px;
+    max-height: 300px;
+    height:auto;
+  }
+  #ct-title-name{
+    font-size: 35px;
+  }
+  .ct-body-spacing{
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .ct-spacer{
+    min-width: 100%;
+    min-height: 150px;
+    max-height: 300px;
+    height:auto;
+  }
+  .ct-title-container{
+    height: 100px;
+  }
+  #ct-title-name{
+    font-size: 28px;
+    margin-top: -10px;
+  }
+  .ct-body-spacing{
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 80%;
+  }
 }
