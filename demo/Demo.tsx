@@ -1,7 +1,5 @@
 import * as React from 'react';
-import HeaderComponent from '../components/HeaderComponents/HeaderComponent'
-
-
+import HeaderComponent from '../components/HeaderComponents/HeaderComponent';
 
 export class Demo extends React.PureComponent {
   render() {
@@ -12,5 +10,3 @@ export class Demo extends React.PureComponent {
     );
   }
 }
-
-
