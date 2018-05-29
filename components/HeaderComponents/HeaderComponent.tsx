@@ -2,6 +2,8 @@ import * as React from 'react';
 import '../../styles/index.less';
 
 export interface HeaderProps {tab_1: string; tab_2: string; tab_3: string; tab_4: string; button_login: string; }
+// tslint:disable-next-line:no-var-requires
+const gitesLogo = require('../../img/gites_logo.png');
 
 export default class HeaderComponent extends React.Component<HeaderProps> {
 
@@ -16,6 +18,7 @@ export default class HeaderComponent extends React.Component<HeaderProps> {
     return (
       <div className='hd-container'>
         <ul className='hd-navbar'>
+          <li id='hd-navbar-tab'><a href='default.asp'><img className='gites_logo' src={gitesLogo} /></a></li>
           <li id='hd-navbar-tab'><a href='default.asp'>{this.props.tab_1}</a></li>
           <li id='hd-navbar-tab'><a href='news.asp'>{this.props.tab_2}</a></li>
           <li id='hd-navbar-tab'><a href='contact.asp'>{this.props.tab_3}</a></li>
