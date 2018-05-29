@@ -25,7 +25,17 @@ export default class HeaderComponent extends React.Component<HeaderProps> {
           <li id='hd-navbar-tab'><a href='about.asp'>{this.props.tab_4}</a></li>
           <li id='hd-navbar-button'><a href='ghajf.php'>{this.props.button_login} </a></li>
         </ul>
-      </div>
+        <ul className='hd-navbar-mobile'>
+          <li id='hd-navbar-tab'><img className='gites_logo' src={gitesLogo} /></li>
+          <li id='hd-navbar-button'><a href='ghajf.php'>{this.props.button_login} </a></li>
+        
+        <div className="hamburger-bundle">
+          <div className="hamburger"></div>
+          <div className="hamburger"></div>
+          <div className="hamburger"></div>
+        </div>
+        </ul>
+       </div>
     );
   }
 }
