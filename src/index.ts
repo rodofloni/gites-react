@@ -1,1 +1,1 @@
-export const PACKAGE_NAME = 'nee';
+export const PACKAGE_NAME = 'gites-react';
