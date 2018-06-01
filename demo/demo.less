@@ -172,21 +172,40 @@ li#hd-navbar-button a {
 li#search-list-tab {
   float: left;
   font-family: "gitesfake";
-  background-color: #fff;
+  background-color: #fafafa;
   padding: 30px;
 }
 li#search-list-tab-persons {
   float: left;
   font-family: "gitesfake";
-  background-color: #fff;
+  background-color: #fafafa;
   padding: 30px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
-#search_max_persons {
+#search-max-persons {
   padding-bottom:3px;
+  border: none;
+  background-color: #f3f3f3;
+  display: inline-block;
+  overflow: hidden;
+} 
+
+#search-list-date-from{
+  border: none;
+  background-color: #fafafa;
+  display: inline-block;
+  overflow: hidden;
 }
+
+#search-list-date-till{
+  border: none;
+ background-color: #fafafa;
+  display: inline-block;
+  overflow: hidden;
+}
+
 
 li#search-list-tab a {
   display: block;
@@ -198,9 +217,7 @@ li#search-list-tab a {
   transform: scale(1, .85);
   
 }
-li#search-list-tab a:hover {
-  border-bottom: 2px solid orangered;
-}
+
 
 li#search-list-button {
   float: right;
@@ -208,6 +225,7 @@ li#search-list-button {
   background-color: orangered;
   //transform: scale(1, .85);
 }
+
 #search-list-button {
   display: block;
   color: white;
@@ -217,6 +235,13 @@ li#search-list-button {
   text-decoration: none;
 }
 
+#search-list-button-text {
+  color: #fff;
+  font-size: large;
+  padding: -20px;
+  margin: -3px;
+  letter-spacing: 1px;
+}
 .search-button{
   background-color: orangered;
   border: 0px;
@@ -242,9 +267,8 @@ input, label {
   src: url(../fonts/Roboto-Regular.ttf) format("truetype");
 }
 
+
 //Responsiveness
-
-
 @media (max-width: 1100px) {
   .hd-navbar {
     display: none;
