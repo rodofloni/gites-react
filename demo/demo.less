@@ -167,6 +167,7 @@ li#hd-navbar-button a {
   border-radius: 10px;
   top: 250px;
   box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2); 
+  z-index: 5;
 }
 
 li#search-list-tab {
@@ -247,6 +248,8 @@ li#search-list-button {
   border: 0px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  border-top-left-radius: none;
+  border-bottom-left-radius: none;
   padding: 43px;
 
 }
@@ -267,8 +270,13 @@ input, label {
   src: url(../fonts/Roboto-Regular.ttf) format("truetype");
 }
 
+@media (max-width: 1570px){
+  .search-container{
+    width: 80%;
+    top: 220px;
+  }
+}
 
-//Responsiveness
 @media (max-width: 1100px) {
   .hd-navbar {
     display: none;
@@ -278,9 +286,10 @@ input, label {
   }
   .ct-spacer{
     min-width: 100%;
-    min-height: 300px;
-    max-height: 600px;
-    height:auto;
+    min-height: 400px;
+    //max-height: 600px;
+    height: auto;
+    padding-top: 300px;
   }
   .ct-body-spacing{
     margin-right: 10%;
@@ -288,8 +297,22 @@ input, label {
     padding: 35px;
     width: 80%;
   }
+  .search-container{
+    top: 5px;
+  }
 
 } 
+@media (max-width: 1075px){
+  .search-button{
+    border: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 43px;
+  }
+  .search-list-button-submit{
+    width: 80vw;
+  }
+}
 @media (max-width: 900px){
   #ct-title-name{
     font-size: 40px;
@@ -298,6 +321,14 @@ input, label {
   margin: auto;
   padding: 35px;
   width: 32%;
+  }
+  .search-list-button-text{
+    padding-right: 1px;
+    padding-left: 1px;
+  }
+
+  .search-container{
+    top: -150px;
   }
   
 }
@@ -317,6 +348,22 @@ input, label {
     padding-right: 0px;
     padding-left: 0px;
     width: 80%;
+  }
+  .search-container{
+    top: -200px;
+  }
+}
+@media (max-width: 750px){
+  .search-list-button-submit{
+    width: 80vw;
+  }
+}
+@media (max-width: 707px){
+  #search-max-persons{
+    width: 60vw;
+  }
+  #search-list-tab{
+    width: 36%;
   }
 }
 @media (max-width: 600px) {
@@ -339,5 +386,11 @@ input, label {
     padding-right: 0px;
     padding-left: 0px;
     width: 95%;
+  }
+  
+}
+@media (max-width: 707px){
+  #search-max-persons{
+    width: 50vw;
   }
 }
