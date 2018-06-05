@@ -30,7 +30,7 @@ public static defaultProps: Partial<SearchProps> = {
     // tslint:disable-next-line:no-console
     console.log('https://www.gites.nl/vakantiehuizen/wintersport?max_persons=4&start_date=20-06-2005&end_date=20-06-2012');
 
-    // window.location.assign(webString);
+    window.location.assign(webString);
 
     // vakantiehuizen?end_date=09-06-2018&max_persons=3&start_date=04-06-2018#
     // https://www.gites.nl/vakantiehuizen/wintersport?max_persons=4&start_date=20-06-2005&end_date=20-06-2012
