@@ -2,39 +2,33 @@ import * as React from 'react';
 import '../../styles/index.less';
 
 // Defining the interface.
-export interface SearchProps {personAmount: number; startDate: string; endDate: string; }
+export interface SearchProps {vacationType: string; }
+
+function dateFormat(date: string): string {
+    const values = date.split('-', 3);
+    const y: string = values[0];
+    const m: string = values[1];
+    const d: string = values[2];
+    return(d + '-' + m + '-' + y);
+  }
 
 export default class SearchComponent extends React.Component<SearchProps> {
 public personAmount: string = '0 personen';
 
 // Defining the default props.
 public static defaultProps: Partial<SearchProps> = {
-    personAmount: 3,
-    startDate: '1-1-2018',
-    endDate: '30-12-2018',
+    vacationType: 'Zomervakantie',
   };
-
-  dateFormat(date: string): string {
-    const values = date.split('-', 3);
-    const y: string = values[0];
-    const m: string = values[1];
-    const d: string = values[2];
-    return(d + m + y);
-  }
 
   onComponentClick(): void {
     const personAmount: string = (document.getElementById('search-max-persons') as HTMLInputElement).value;
     const dateStart: string = (document.getElementById('search-list-date-from') as HTMLInputElement).value;
     const dateEnd: string = (document.getElementById('search-list-date-till') as HTMLInputElement).value;
-    const webString = 'https://www.gites.nl/vakantiehuizen/wintersport?max_persons=' + personAmount + '&start_date=' + dateStart + '&end_date=' + dateEnd;
+    const webString = 'https://www.gites.nl/vakantiehuizen/' + this.props.vacationType + '?max_persons=' + personAmount + '&start_date=' + dateFormat(dateStart) + '&end_date=' + dateFormat(dateEnd);
     // tslint:disable-next-line:no-console
     console.log(webString);
     // tslint:disable-next-line:no-console
     console.log('https://www.gites.nl/vakantiehuizen/wintersport?max_persons=4&start_date=20-06-2005&end_date=20-06-2012');
-    // tslint:disable-next-line:no-console
-    console.log(this.dateFormat(dateStart));
-    // tslint:disable-next-line:no-console
-    console.log(this.dateFormat(dateEnd));
 
     // window.location.assign(webString);
 
@@ -87,7 +81,7 @@ public static defaultProps: Partial<SearchProps> = {
                     </li>
                     <li id='search-list-button'>
                         <div className='search-list-button-submit'>
-                            <button onClick = { this.onComponentClick } name='button' type='button' className='search-button' data-label='Vind mijn vakantiehuis'> <p id='search-list-button-text'>  Vind mijn vakantiehuis </p> </button>
+                            <button onClick = { () => this.onComponentClick() } name='button' type='button' className='search-button' data-label='Vind mijn vakantiehuis'> <p id='search-list-button-text'>  Vind mijn vakantiehuis </p> </button>
                         </div>
                     </li>
                 </form>

@@ -16,7 +16,7 @@ public static defaultProps: Partial<SpacerProps> = {
   render() {
     return (
         <div className='ct-spacer'>
-            <SearchComponent personAmount={9} startDate={'0-0-2019'} endDate={'12-12-2018'} />
+            <SearchComponent vacationType={'wintersport'} />
         </div>
     );
   }
