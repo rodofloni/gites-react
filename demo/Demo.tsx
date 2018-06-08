@@ -6,20 +6,21 @@ export class Demo extends React.PureComponent {
     super(props);
     this.state = 'true';
 }
+  public isActive: string = 'true';
 
   onComponentClick(): void {
-      this.state = 'nan';
+      this.isActive = 'false';
       // tslint:disable-next-line:no-console
-      console.log(this.state);
+      console.log(this.isActive);
     }
   render() {
-    if (this.state === 'true') {
+    if (this.isActive === 'true') {
       // tslint:disable-next-line:no-console
       console.log(this.state);
       return (
         <body>
           <div>
-              <MainView isActive={'true'}/>
+              <MainView isActive={this.isActive}/>
               <button  onClick = { () => this.onComponentClick() }> toggle </button>
           </div>
         </body>

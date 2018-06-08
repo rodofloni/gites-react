@@ -4,38 +4,33 @@ import ContentSpacer from '../components/ContentContainers/ContentSpacer/Content
 import ContentTitle from '../components/ContentContainers/ContentTitle/ContentTitle';
 import HeaderComponent from '../components/HeaderComponents/HeaderComponent';
 
-export interface ViewProps {isActive: string; }
+export interface MyComponentState { isActive: string; }
 
-export default class MainView  extends React.Component<ViewProps> {
+export default class MainView extends React.Component<MyComponentState> {
   constructor(props: any) {
     super(props);
-    this.state = 'true';
-}
+    this.state = { isActive: 'true' };
+  }
 
   render() {
-    if (this.state === 'true') {
+    if (this.props.isActive === 'true') {
       // tslint:disable-next-line:no-console
-      console.log(this.state );
+      console.log(this.state);
       return (
-        <body>
-          <div>
-            <HeaderComponent tab_1={'Vakantiehuizen'} tab_2={'Bed & Breakfast'} tab_3={'Te koop'} tab_4={'Adverteren'} button_login={'Inloggen'}/>
-            <ContentSpacer spacerHeight={'50%'}/>
-            <ContentTitle titleContent={'Wintersport in Frankrijk'}/>
-            <ContentBody
-              bodyTitle={'Wintersport in Frankrijk'}
-              bodyContent={'Frankrijk heeft meer dan 60 skigebieden en ruim 20.000 kilometer pistes, van uitgestrekte skigebieden met meer dan 600 kilometer geprepareerde pistes tot intiem kleine gebieden met een sleeplift en drie afdelingen. De grootste en bekendste vind je in de Alpen, in de regio’s Provence-Alpes-Côte d’Azur en de Rhône-Alpes. De namen Megèves in de Haute Savoie of Alpes d’Huez in de Isère spreken tot de verbeelding. Minder bekend zijn de skigebieden in de Pyreneeën, maar ze zijn zeker de moeite waard. St. Lary Soulon of Ax Les Therme zijn in het zuiden van Frankrijk en het Noorden van Spanje een begrip. Ook het Centraal Massief kent skimogelijkheden in de regio Auvergne en in het departement de Aveyron. In het Noord Oosten van Frankrijk, in de Lorraine, de Elzas en Franche Comté zijn voor Nederland goed aan te rijden skigebieden. De huizen die je in deze selectie aantreft zijn maximaal 30 kilometer van de pistes verwijderd, maar sommige huizen vind je zelfs op de piste. We hebben in deze selectie geen rekening gehouden met Langlaufen, niet omdat het geen wintersport zou zijn, maar omdat in een veel groter deel van Frankrijk gelanglaufd kan worden, ook zonder dat er pistes zijn. Kijk eens rond in onze verschillende selecties…'} />
-          </div>
-          <button  onClick = { () => this.state = 'false' }> ffds </button>
-        </body>
+        <div>
+          <HeaderComponent tab_1={'Vakantiehuizen'} tab_2={'Bed & Breakfast'} tab_3={'Te koop'} tab_4={'Adverteren'} button_login={'Inloggen'} />
+          <ContentSpacer spacerHeight={'50%'} />
+          <ContentTitle titleContent={'Wintersport in Frankrijk'} />
+          <ContentBody
+            bodyTitle={'Wintersport in Frankrijk'}
+            bodyContent={'Frankrijk heeft meer dan 60 skigebieden en ruim 20.000 kilometer pistes, van uitgestrekte skigebieden met meer dan 600 kilometer geprepareerde pistes tot intiem kleine gebieden met een sleeplift en drie afdelingen. De grootste en bekendste vind je in de Alpen, in de regio’s Provence-Alpes-Côte d’Azur en de Rhône-Alpes. De namen Megèves in de Haute Savoie of Alpes d’Huez in de Isère spreken tot de verbeelding. Minder bekend zijn de skigebieden in de Pyreneeën, maar ze zijn zeker de moeite waard. St. Lary Soulon of Ax Les Therme zijn in het zuiden van Frankrijk en het Noorden van Spanje een begrip. Ook het Centraal Massief kent skimogelijkheden in de regio Auvergne en in het departement de Aveyron. In het Noord Oosten van Frankrijk, in de Lorraine, de Elzas en Franche Comté zijn voor Nederland goed aan te rijden skigebieden. De huizen die je in deze selectie aantreft zijn maximaal 30 kilometer van de pistes verwijderd, maar sommige huizen vind je zelfs op de piste. We hebben in deze selectie geen rekening gehouden met Langlaufen, niet omdat het geen wintersport zou zijn, maar omdat in een veel groter deel van Frankrijk gelanglaufd kan worden, ook zonder dat er pistes zijn. Kijk eens rond in onze verschillende selecties…'} />
+        </div>
       );
     } else {
       return (
-        <body>
-          <div>
-            <button  onClick = { () => this.state = 'false' }> ffds </button>
-          </div>
-        </body>
+        <div>
+          <button onClick={() => this.state = 'false'}> ffds </button>
+        </div>
       );
     }
 
