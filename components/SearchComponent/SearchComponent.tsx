@@ -4,16 +4,16 @@ import '../../styles/index.less';
 // Defining the interface.
 export interface SearchProps {vacationType: string; }
 
-function dateFormat(date: string): string {
+export default class SearchComponent extends React.Component<SearchProps> {
+public personAmount: string = '0 personen';
+
+public dateFormat(date: string): string {
     const values = date.split('-', 3);
     const y: string = values[0];
     const m: string = values[1];
     const d: string = values[2];
     return(d + '-' + m + '-' + y);
   }
-
-export default class SearchComponent extends React.Component<SearchProps> {
-public personAmount: string = '0 personen';
 
 // Defining the default props.
 public static defaultProps: Partial<SearchProps> = {
@@ -24,7 +24,7 @@ public static defaultProps: Partial<SearchProps> = {
     const personAmount: string = (document.getElementById('search-max-persons') as HTMLInputElement).value;
     const dateStart: string = (document.getElementById('search-list-date-from') as HTMLInputElement).value;
     const dateEnd: string = (document.getElementById('search-list-date-till') as HTMLInputElement).value;
-    const webString = 'https://www.gites.nl/vakantiehuizen/' + this.props.vacationType + '?max_persons=' + personAmount + '&start_date=' + dateFormat(dateStart) + '&end_date=' + dateFormat(dateEnd);
+    const webString = 'https://www.gites.nl/vakantiehuizen/' + this.props.vacationType + '?max_persons=' + personAmount + '&start_date=' + this.dateFormat(dateStart) + '&end_date=' + this.dateFormat(dateEnd);
     // tslint:disable-next-line:no-console
     console.log(webString);
     // tslint:disable-next-line:no-console
