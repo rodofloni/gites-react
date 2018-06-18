@@ -14,7 +14,6 @@ export class Demo extends React.PureComponent {
       console.log(this.isActive);
     }
   render() {
-    if (this.isActive === 'true') {
       // tslint:disable-next-line:no-console
       console.log(this.state);
       return (
@@ -25,16 +24,6 @@ export class Demo extends React.PureComponent {
           </div>
         </body>
       );
-    } else {
-      return (
-        <body>
-          <div>
-              <h1> nada </h1>
-          </div>
-        </body>
-      );
-    }
-
   }
 }
 
