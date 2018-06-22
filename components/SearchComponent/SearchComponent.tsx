@@ -1,7 +1,7 @@
 import * as React from 'react';
 import '../../styles/index.less';
 
-// Defining the interface for minimal properties.
+// Defining the interface for minimal properties vacationtypes define the type of holiday.
 export interface SearchProps {vacationType: string; }
 
 // Date formatter to convert YYYY-MM-DD to DD-MM-YYYY

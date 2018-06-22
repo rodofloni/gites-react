@@ -7,7 +7,7 @@ export interface SpacerProps {spacerHeight: string; }
 
 export default class ContentSpacer extends React.Component<SpacerProps> {
 
-// Defining the default props.
+// Defining the default props. not yet implemented as inserting props into CSS wasn't a prioritary functionality.
 public static defaultProps: Partial<SpacerProps> = {
     spacerHeight: '10%',
 
