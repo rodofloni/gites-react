@@ -13,11 +13,6 @@ public static defaultProps: Partial<BodyProps> = {
 
   };
 
-  onButtonClick(): void {
-    const testString: string = 'hello hello hello';
-    // tslint:disable-next-line:no-console
-    console.log(testString);
-  }
 // Declaring what is being rendered.
   render() {
     return (
@@ -25,9 +20,6 @@ public static defaultProps: Partial<BodyProps> = {
             <div className='ct-body-spacing'>
                 <h2 id='ct-body-title'> {this.props.bodyTitle} </h2>
                 <p id='cs-body-content'> {this.props.bodyContent} </p>
-            </div>
-            <div>
-            <button onClick = { this.onButtonClick } name='button' type='button' className='search-button' data-label='Vind mijn vakantiehuis'> <p id='search-list-button-text'>  test </p> </button>
             </div>
         </div>
     );
